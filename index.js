@@ -11,7 +11,12 @@ const client = new Discord.Client({
 });
 
 client.on("ready", () => {
-    console.log("bot is ready i think")
+    console.log("bot is ready i think");
+    client.user.setActivity({
+        name: "something",
+        type: "PLAYING",
+        url: "https://discord.com/",
+    })
 });
 
 client.commands = new Discord.Collection();
